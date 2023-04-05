@@ -30,10 +30,6 @@ async function populateLaunches() {
       ],
     },
   });
-  // if(response.statuse !== 200){
-  //   console.log("problem downloading launch data")
-  //   throw new Error("launch data download failed")
-  // }
 
   const launchDocs = response.data.docs;
   for (const launchDoc of launchDocs) {
