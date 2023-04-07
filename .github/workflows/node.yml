@@ -6,17 +6,12 @@ on:
         branches: [master]
 jobs:
     build:
-        # set environment variable
         env:
-            # react app test script undrestand we are in (ci) and automaticly dissable watch mode
             CI: true
-            # set env for db
             MONGO_URL: mongodb://localhost/nasa
 
-        #you can run test or all build job in (strategy)
         strategy:
             matrix:
-                #this make two build job on node V 14 and 16 and one job for mango version 4.2 and 4.4
                 node-version: [14.x, 16.x]
                 mongodb-version: ["4.4"]
         runs-on: ubuntu-latests
@@ -25,10 +20,8 @@ jobs:
             - name: Use Node.js version ${{ matrix.node-version }}
               uses: actions/setup-node@v2
               with:
-                  # if you specify node version on (strategy) you should call it like that
                   node-version: ${{ matrix.node-version }}
 
-            #add another action for make test DB
             - name: Use MongoDB from Github Actions
               uses: supercharge/mongodb-github-action@1.9.0
               with:
@@ -36,5 +29,4 @@ jobs:
 
             - run: npm install
             - run: npm run build --prefix client
-            # add npm test
             - run: npm test
