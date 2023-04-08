@@ -14,7 +14,7 @@ jobs:
             matrix:
                 node-version: [14.x, 16.x]
                 mongodb-version: ["4.4"]
-        runs-on: ubuntu-latests
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
             - name: Use Node.js version ${{ matrix.node-version }}
