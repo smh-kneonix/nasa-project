@@ -9,7 +9,7 @@ async function mongoConnenct() {
     .connect(MONGO_URL)
     //check connection
     .then(() => console.log("MongoDB connected..."))
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(`error from here ${err}`));
 }
 
 async function mongoDisconnect() {

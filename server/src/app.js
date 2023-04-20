@@ -7,7 +7,7 @@ const cors = require("cors");
 const api = require("./routes/api");
 const app = express();
 
-const crosOrigin = ["http://localhost:3000", "http://192.168.1.102:3000"];
+const crosOrigin = ["http://localhost:3000", "http://localhost:8000"];
 app.use(cors(crosOrigin));
 
 //add morgan

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --detectOpenHandles",
     "test-watch": "jest --watch",
-    "start": "PORT=5000 node src/server.js",
+    "start": "PORT=8000 node src/server.js",
+    "start-win": "set PORT=5000 && node src/server.js",
     "watch": "nodemon src/server.js",
     "cluster": "pm2 start src/server.js -i max"
   },
