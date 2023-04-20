@@ -25,15 +25,31 @@ To install this project, you can follow these steps:
 Once the application is running, you can access it by navigating to http://localhost:8000 in your web browser. From there, you can explore the habitable planets and view mission status data from SpaceX.
 
 
+## Docker Container
+
+Docker container has been added to the project to make it easier to deploy and run the application in different environments. The container includes all the necessary dependencies and configurations, making it easy to set up and run the application on any machine that supports Docker. This also helps to ensure consistency across different environments and reduces the risk of configuration errors.
+
+> if you use docker make sure follow these steps
+
+
+1. open the docker
+2. build docker image
+```bash
+  docker build . -t dockerUserName/nasa-project
+ ```
+3. run the docker you build
+```bash
+ docker run -it -p 8000:8000 dockerUserName/nasa-project
+ ```
+
+<br>
+
 ## Additional Features
+<details>
+<summary> Features details </summary>
 
+<br>
 In addition to the existing features, the following features have been added to the project:
-
-
-### Front End
-
-The front end of this project was built using the Zero to Mastery course. It provides a user-friendly interface for exploring the data gathered by the application.
-
 
 ### Error Handling
 
@@ -75,21 +91,10 @@ API pagination has been implemented to limit the amount of data returned by the 
 ### API Testing
 
 API testing has been implemented using the <a href="https://www.npmjs.com/package/mongoose">jest</a> and <a href="https://www.npmjs.com/package/supertest">supertest</a> packages. This allows for automated testing of the API endpoints to ensure that they are working correctly.
+</details>
 
-## Docker Container
+<br>
 
-Docker container has been added to the project to make it easier to deploy and run the application in different environments. The container includes all the necessary dependencies and configurations, making it easy to set up and run the application on any machine that supports Docker. This also helps to ensure consistency across different environments and reduces the risk of configuration errors.
+## Front-End
 
-> if you use docker make sure follow these steps
-
-
-1. open the docker
-2. build docker image
-```bash
-  docker build . -t dockerUserName/nasa-project
- ```
-3. run the docker you build
-```bash
- docker run -it -p 8000:8000 dockerUserName/nasa-project
- ```
- 
+The front end of this project was built by the Zero to Mastery Nodejs course. It provides a user-friendly interface for exploring the data gathered by the application.
