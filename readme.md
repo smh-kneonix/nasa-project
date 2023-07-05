@@ -59,24 +59,6 @@ Docker container has been added to the project to make deploying and running the
 
 <br>
 
-## Docker Container
-
-Docker container has been added to the project to make it easier to deploy and run the application in different environments. The container includes all the necessary dependencies and configurations, making it easy to set up and run the application on any machine that supports Docker. This also helps to ensure consistency across different environments and reduces the risk of configuration errors.
-
-> if you use docker make sure follow these steps
-
-
-1. open the docker
-2. build docker image
-```bash
-  docker build . -t dockerUserName/nasa-project
- ```
-3. run the docker you build
-```bash
- docker run -it -p 8000:8000 dockerUserName/nasa-project
- ```
-
-<br>
 
 ## Additional Features
 <details>
