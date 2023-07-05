@@ -19,18 +19,18 @@ To install this project, you can follow these steps:
  git clone https://github.com/smh-kneonix/nasa-project
  ```
 
-3. run mongo db with yourself or just run it by docker-compose
+2. run mongo db with yourself or just run it by docker-compose
 ```bash
  docker-compose up
  ```
 
  > HINT: if you want to use your own server make sure config the env
 
-2. Install the necessary dependencies by running npm install
+3. Install the necessary dependencies by running npm install
 ```bash
  npm install
  ```
-3. Start the application by running the server
+4. Start the application by running the server
 ```bash
  npm run server
  ```
@@ -53,6 +53,25 @@ Docker container has been added to the project to make deploying and running the
   docker build . -t dockerUserName/nasa-project
  ```
 3. run the docker image
+```bash
+ docker run -it -p 8000:8000 dockerUserName/nasa-project
+ ```
+
+<br>
+
+## Docker Container
+
+Docker container has been added to the project to make it easier to deploy and run the application in different environments. The container includes all the necessary dependencies and configurations, making it easy to set up and run the application on any machine that supports Docker. This also helps to ensure consistency across different environments and reduces the risk of configuration errors.
+
+> if you use docker make sure follow these steps
+
+
+1. open the docker
+2. build docker image
+```bash
+  docker build . -t dockerUserName/nasa-project
+ ```
+3. run the docker you build
 ```bash
  docker run -it -p 8000:8000 dockerUserName/nasa-project
  ```
